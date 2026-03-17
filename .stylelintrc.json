@@ -1,0 +1,25 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": ["stylelint-declaration-strict-value"],
+  "rules": {
+    "declaration-block-no-duplicate-properties": [
+      true,
+      {
+        "ignoreProperties": ["background-clip", "-webkit-background-clip"]
+      }
+    ],
+    "property-no-vendor-prefix": [
+      true,
+      {
+        "ignoreProperties": ["background-clip", "-webkit-background-clip", "text-fill-color", "-webkit-text-fill-color"]
+      }
+    ],
+    "scale-unlimited/declaration-strict-value": [
+      ["/color/", "fill", "stroke", "background-color", "border-color"],
+      {
+        "ignoreValues": ["transparent", "inherit", "none", "currentColor"],
+        "message": "Raw colors are banned. Use a design token var(--color-*) instead."
+      }
+    ]
+  }
+}

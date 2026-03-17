@@ -1,0 +1,6 @@
+# .prettierignore — Files Prettier should not format
+node_modules/
+dist/
+.vite/
+*.min.js
+package-lock.json
